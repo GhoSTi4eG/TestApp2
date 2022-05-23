@@ -1,0 +1,36 @@
+﻿@model IEnumerable<TestApp2.Models.Contact>
+@{
+    ViewBag.Title = "Список контактов телефонного справочника";
+}
+<head>
+   
+</head>
+
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+<div>
+    <table>
+        <tr class="header">
+            <td><p>Табельный номер</p></td>
+            <td><p>ФИО</p></td>
+            <td><p>Вн. номер</p></td>
+            <td><p>Внеш. номер</p></td>
+            <td><p>Адрес</p></td>
+            <td><p>Дата рождение</p></td>
+            <td><p>Email</p></td>
+
+        </tr> 
+        @foreach (TestApp2.Models.Contact c in Model)
+        {
+            <tr>
+                <td><p>@c.TabN</p></td>
+                <td><p>@c.FIO</p></td>
+                <td><p>@c.InNmb</p></td>
+                <td><p>@c.OtNmb</p></td>
+                <td><p>@c.Adres</p></td>
+                <td><p>@c.Date</p></td>
+                <td><p>@c.Email</p></td>
+            </tr>
+        }
+    </table>
+</div>
